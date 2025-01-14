@@ -27,7 +27,7 @@ namespace Lap_1
             int DepoistAmount = int.Parse(txtAmount.Text);
             double InsteretAmount = int.Parse(cmbInsteret.SelectedItem.ToString());
             double years = int.Parse(cmbYears.SelectedItem.ToString());
-            double Result = DepoistAmount * Math.Pow(1 + InsteretAmount, years);
+            double Result = DepoistAmount + ((InsteretAmount * years) / 100);
             txtTotal.Text = Result.ToString();
         }
     }
